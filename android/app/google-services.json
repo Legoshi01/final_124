@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "135617131213",
+    "project_id": "clinicbooking-caf33",
+    "storage_bucket": "clinicbooking-caf33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135617131213:android:3baab6aea113f56b8b6f84",
+        "android_client_info": {
+          "package_name": "io.yaseen.dev.clinic_booking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135617131213-5s6cjh4pt5ev6crt7kfpmaommnffdp0d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.yaseen.dev.clinic_booking",
+            "certificate_hash": "04189c4a0eb10cbb8f22c2e50cd2d48eb519fe0e"
+          }
+        },
+        {
+          "client_id": "135617131213-lu3b5sjlf0clemqlobmqe5r9ojnsp56l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEfUcJ92R54V06KJI7MnI1jT_sRKsOxkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135617131213-lu3b5sjlf0clemqlobmqe5r9ojnsp56l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
