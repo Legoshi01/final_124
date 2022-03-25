@@ -32,12 +32,12 @@ class _LoginPageState extends State<LoginPage> {
           GoogleAuthButton(
             onPressed: () {
               signInWithGoogle().then((value) {
-                // Navigator.pushReplacement(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => HomePage(),
-                //   ),
-                // );
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => homePage(),
+                  ),
+                );
               });
             },
             darkMode: false, // if true second example
