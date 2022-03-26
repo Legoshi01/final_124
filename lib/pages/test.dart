@@ -1,23 +1,15 @@
-import 'package:clinic_booking/pages/event.dart';
+import 'package:calendar/event.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-// import 'pages/basics_example.dart';
-// import 'pages/complex_example.dart';
-// import 'pages/events_example.dart';
-// import 'pages/multi_example.dart';
-// import 'pages/range_example.dart';
-
-class homePage extends StatefulWidget {
-  const homePage({Key? key}) : super(key: key);
-
+class Calendar extends StatefulWidget {
   @override
-  State<homePage> createState() => _homePageState();
+  _CalendarState createState() => _CalendarState();
 }
 
-class _homePageState extends State<homePage> {
-  late Map<DateTime, List<Event>> salectedEvents;
-
+class _CalendarState extends State<Calendar> {
+  Map<DateTime, List<Event>> selectedEvents;
+  String? name;
   CalendarFormat format = CalendarFormat.month;
   DateTime selectedDay = DateTime.now();
   DateTime focusedDay = DateTime.now();
@@ -26,15 +18,15 @@ class _homePageState extends State<homePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
-    salectedEvents = {};
+    selectedEvents = {};
     super.initState();
   }
 
   List<Event> _getEventsfromDay(DateTime date) {
-    return salectedEvents[date] ?? [];
+    return selectedEvents[date] ?? [];
   }
 
+  @override
   void dispose() {
     _eventController.dispose();
     super.dispose();
@@ -139,12 +131,12 @@ class _homePageState extends State<homePage> {
                 onPressed: () {
                   if (_eventController.text.isEmpty) {
                   } else {
-                    if (salectedEvents[selectedDay] != null) {
-                      salectedEvents[selectedDay]?.add(
+                    if (selectedEvents[selectedDay] != null) {
+                      selectedEvents[selectedDay].add(
                         Event(title: _eventController.text),
                       );
                     } else {
-                      salectedEvents[selectedDay] = [
+                      selectedEvents[selectedDay] = [
                         Event(title: _eventController.text)
                       ];
                     }
